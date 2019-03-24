@@ -24,6 +24,6 @@ public class RouteFinderController {
 	public String greeting(@RequestParam(value = "origin") String origin,
 			@RequestParam(value = "destination") String destination) {
 		logger.debug("Finding the route from {} to {}", origin, destination);
-		return service.hasRouteExist(origin, destination) ? "yes" : "no";
+		return service.hasRoute(origin, destination) ? "yes" : "no";
 	}
 }

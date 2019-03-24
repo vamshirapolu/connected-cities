@@ -32,13 +32,19 @@ public class RouteFinderControllerTest {
 	}
 
 	@Test
-	public void connectsServiceTest() throws Exception {
+	public void connectedRoutesTest() throws Exception {
+		assertEquals(checkRouteExist("Boston", "New York"), "yes");
+		assertEquals(checkRouteExist("Boston", "Philadelphia"), "yes");
+		assertEquals(checkRouteExist("Philadelphia", "Albany"), "no");
+	}
+
+	private String checkRouteExist(String origin, String destication) throws Exception {
 		MvcResult result = this.mockMvc
-				.perform(get("/connected?origin={origin}&destination={destination}", "Boston", "New York"))
+				.perform(get("/connected?origin={origin}&destination={destination}", origin, destication))
 				.andExpect(status().isOk()).andDo(print()).andReturn();
 		String content = result.getResponse().getContentAsString();
-		assertNotNull(result);
-		assertEquals(content, "yes");
+		assertNotNull(content);
+		return content;
 	}
 
 }
