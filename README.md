@@ -2,7 +2,7 @@
 
 Program to check if the route exists between two cities.
 
-The default city routes are loading form the city.txt file under resources folder. This file name is configured in the application.properties file.
+The default city routes are loading form the ` city.txt ` file under resources folder. This file name is configured in the ` application.properties ` file.
 
 ## Implementation ##
 

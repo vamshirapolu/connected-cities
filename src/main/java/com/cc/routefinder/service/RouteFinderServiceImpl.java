@@ -84,7 +84,6 @@ public class RouteFinderServiceImpl implements RouteFinderService {
 			if (!visitedVertices.contains(nextVertex.getValue())) {
 				logger.debug("Traversing to {}", nextVertex);
 				if (hasRoute(nextVertex, destinationVertex, visitedVertices)) {
-					logger.debug("Route {}", visitedVertices);
 					return true;
 				}
 			}
