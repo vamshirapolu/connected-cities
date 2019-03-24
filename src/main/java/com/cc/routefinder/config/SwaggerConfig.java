@@ -11,6 +11,14 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * Configuration to enable the Swagger integration. Swagger documentation can be
+ * accessed using http://localhost:8080/swagger-ui.html page after the
+ * successful starting the application.
+ * 
+ * @author Vamshi
+ *
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

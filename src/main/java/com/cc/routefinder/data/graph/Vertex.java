@@ -1,10 +1,18 @@
-package com.cc.routefinder.graph;
+package com.cc.routefinder.data.graph;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * This class will represent a node which is a vertex in the graph data
+ * structure. Every vertex holds the vertex name and list of adjacent vertices
+ * as a set.
+ * 
+ * @author Vamshi
+ *
+ */
 public class Vertex {
 	private String value;
 	private Set<Vertex> adjacents = new HashSet<>();

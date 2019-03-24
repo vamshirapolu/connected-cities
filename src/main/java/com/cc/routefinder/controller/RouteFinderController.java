@@ -15,6 +15,13 @@ import com.cc.routefinder.service.RouteFinderService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
+/**
+ * This class will map the rest end point and calls the underlying service
+ * methods.
+ * 
+ * @author Vamshi
+ *
+ */
 @RestController
 public class RouteFinderController {
 

@@ -20,6 +20,7 @@ This project has a dependency on [Java8](https://www.oracle.com/technetwork/java
 - Self-root always returns “no”, even if the route exists in the ` city.txt ` (can be handled if needed)
 - If the provided origin or destination does not exist in ` city.txt `, it will return “no”
 - The routes from ` city.txt ` are considered as bidirectional routes. 
+- In swagger documentation, the destination city field is displayed before the origin city.
 
 ## How to run? ##
 
@@ -33,6 +34,6 @@ Run the spring boot standalone using the maven
 
 ## Swagger Documentation ##
 
-Once the spring standalone is successfully started the swagger documentation for connected route endpoint can be accessible using [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+Once the spring boot standalone is successfully started the swagger documentation for connected route endpoint can be accessible using [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-![Swagger UI](https://i.imgur.com/oUPec9t.jpg)
+![Swagger UI](https://i.imgur.com/Hxp0ikw.jpg)

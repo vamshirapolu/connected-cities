@@ -3,7 +3,6 @@ package com.cc.routefinder;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
@@ -41,7 +40,7 @@ public class RouteFinderControllerTest {
 	private String checkRouteExist(String origin, String destication) throws Exception {
 		MvcResult result = this.mockMvc
 				.perform(get("/connected?origin={origin}&destination={destination}", origin, destication))
-				.andExpect(status().isOk()).andDo(print()).andReturn();
+				.andExpect(status().isOk()).andReturn();
 		String content = result.getResponse().getContentAsString();
 		assertNotNull(content);
 		return content;
