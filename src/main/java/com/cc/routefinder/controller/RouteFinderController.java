@@ -5,12 +5,15 @@ import java.lang.invoke.MethodHandles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cc.routefinder.service.RouteFinderService;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @RestController
 public class RouteFinderController {
@@ -20,9 +23,11 @@ public class RouteFinderController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-	@GetMapping("/connected")
-	public String greeting(@RequestParam(value = "origin") String origin,
-			@RequestParam(value = "destination") String destination) {
+	@ApiOperation(value = "Finds the route between two cities", response = String.class)
+	@RequestMapping(method = RequestMethod.GET, path = "/connected", produces = "text/plain")
+	public String greeting(
+			@ApiParam(value = "Origin City", required = true, example = "Boston") @RequestParam(value = "origin") String origin,
+			@ApiParam(value = "Destination City", required = true, example = "New York") @RequestParam(value = "destination") String destination) {
 		logger.debug("Finding the route from {} to {}", origin, destination);
 		return service.hasRoute(origin, destination) ? "yes" : "no";
 	}
