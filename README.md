@@ -14,12 +14,12 @@ This project has a dependency on [Java8](https://www.oracle.com/technetwork/java
 
 ## Facts to surface ##
 
-- City routes file is read considering it doesn’t have any empty lines or lines with spaces.
-- Every line in the city.txt file will have origin and destination cities with comma separated.
+- City routes file ` city.txt ` is read considering it doesn’t have any empty lines or lines with only spaces.
+- Every line in the ` city.txt ` file will have origin and destination cities with comma separated.
 - Origin and Destination names are case sensitive
-- Self-root always returns “no”, even if the route exists in the city.txt (can be handled if needed)
-- If the provided origin or destination does not exist in city.txt, it will return “no”
-- The routes from city.txt are considered as bidirectional routes. 
+- Self-root always returns “no”, even if the route exists in the ` city.txt ` (can be handled if needed)
+- If the provided origin or destination does not exist in ` city.txt `, it will return “no”
+- The routes from ` city.txt ` are considered as bidirectional routes. 
 
 ## How to run? ##
 
@@ -34,3 +34,5 @@ Run the spring boot standalone using the maven
 ## Swagger Documentation ##
 
 Once the spring standalone is successfully started the swagger documentation for connected route endpoint can be accessible using [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+![Swagger UI](https://i.imgur.com/oUPec9t.jpg)
