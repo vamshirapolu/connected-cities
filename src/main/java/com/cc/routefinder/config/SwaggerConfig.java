@@ -9,6 +9,9 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger.web.DocExpansion;
+import springfox.documentation.swagger.web.UiConfiguration;
+import springfox.documentation.swagger.web.UiConfigurationBuilder;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
@@ -33,6 +36,12 @@ public class SwaggerConfig {
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Route Finder Rest API")
 				.description("REST API documentation on finding the route between given two cities").version("1.0")
+				.build();
+	}
+
+	@Bean
+	UiConfiguration uiConfig() {
+		return UiConfigurationBuilder.builder().docExpansion(DocExpansion.FULL)
 				.build();
 	}
 }

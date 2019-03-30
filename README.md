@@ -20,7 +20,6 @@ This project has a dependency on [Java8](https://www.oracle.com/technetwork/java
 - Self-root always returns “no”, even if the route exists in the ` city.txt ` (can be handled if needed)
 - If the provided origin or destination does not exist in ` city.txt `, it will return “no”
 - The routes from ` city.txt ` are considered as bidirectional routes. 
-- In swagger documentation, the destination city field is displayed before the origin city.
 
 ## How to run? ##
 
